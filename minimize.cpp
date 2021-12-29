@@ -15,7 +15,7 @@ int main()
         // convert int to char array
         std::sprintf(num_char, "%d", ctr);
 
-        // minimize
+        // minimize all current windows
         HWND lHwnd = FindWindow(L"Shell_TrayWnd", NULL);
         SendMessage(lHwnd, WM_COMMAND, MIN_ALL, 0);
 
@@ -27,7 +27,7 @@ int main()
             std::cerr << "Cannot open the output file." << std::endl;
             return 1;
         }
-        fs << "d3adzo minimized all your windows ;) -> Iteration #" << num_char << "\n";
+        fs << "message here -> Iteration #" << num_char << "\n";
         fs.close();
         
         ctr++;
